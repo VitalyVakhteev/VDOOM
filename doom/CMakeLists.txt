@@ -10,7 +10,12 @@ add_executable(VDOOM
         d_think.h
         dstrings.cpp
         dstrings.h
-        w_wad.cpp
         w_wad.h
+        doomdef.h
+        doomdef.cpp
+        doomtype.h
+        doomdata.h
+        d_event.h
+        d_items.h
 )
 

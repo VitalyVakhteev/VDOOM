@@ -17,7 +17,7 @@ namespace Doom {
     struct FileLump {
         int filePosition;
         int size;
-        std::string name;
+        const char *name;
     };
 
     class LumpInfo {
