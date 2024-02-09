@@ -10,5 +10,7 @@ add_executable(VDOOM
         d_think.h
         dstrings.cpp
         dstrings.h
+        w_wad.cpp
+        w_wad.h
 )
 
