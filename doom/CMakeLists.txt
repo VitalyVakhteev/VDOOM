@@ -35,7 +35,7 @@ add_executable(VDOOM
         g_game.h
         hu_lib.c
         hu_lib.h
-        hu_stuff.c
+        hu_stuff.cpp
         hu_stuff.h
         i_main.c
         i_net.cpp
@@ -46,7 +46,7 @@ add_executable(VDOOM
         i_system.h
         i_video.cpp
         i_video.h
-        info.c
+        info.cpp
         info.h
         m_argv.c
         m_argv.h
@@ -64,69 +64,69 @@ add_executable(VDOOM
         m_random.h
         m_swap.c
         m_swap.h
-        p_ceilng.c
-        p_doors.c
-        p_enemy.c
-        p_floor.c
-        p_inter.c
+        p_ceilng.cpp
+        p_doors.cpp
+        p_enemy.cpp
+        p_floor.cpp
+        p_inter.cpp
         p_inter.h
-        p_lights.c
+        p_lights.cpp
         p_local.h
-        p_map.c
-        p_maputl.c
-        p_mobj.c
+        p_map.cpp
+        p_maputl.cpp
+        p_mobj.cpp
         p_mobj.h
-        p_plats.c
-        p_pspr.c
+        p_plats.cpp
+        p_pspr.cpp
         p_pspr.h
-        p_saveg.c
+        p_saveg.cpp
         p_saveg.h
-        p_setup.c
+        p_setup.cpp
         p_setup.h
-        p_sight.c
-        p_spec.c
+        p_sight.cpp
+        p_spec.cpp
         p_spec.h
-        p_switch.c
-        p_telept.c
-        p_tick.c
+        p_switch.cpp
+        p_telept.cpp
+        p_tick.cpp
         p_tick.h
-        p_user.c
-        r_bsp.c
+        p_user.cpp
+        r_bsp.cpp
         r_bsp.h
-        r_data.c
+        r_data.cpp
         r_data.h
         r_defs.h
-        r_draw.c
+        r_draw.cpp
         r_draw.h
         r_local.h
-        r_main.c
+        r_main.cpp
         r_main.h
-        r_plane.c
+        r_plane.cpp
         r_plane.h
-        r_segs.c
+        r_segs.cpp
         r_segs.h
-        r_sky.c
+        r_sky.cpp
         r_sky.h
         r_state.h
-        r_things.c
+        r_things.cpp
         r_things.h
-        s_sound.c
+        s_sound.cpp
         s_sound.h
-        sounds.c
+        sounds.cpp
         sounds.h
-        st_lib.c
+        st_lib.cpp
         st_lib.h
-        st_stuff.c
+        st_stuff.cpp
         st_stuff.h
-        tables.c
+        tables.cpp
         tables.h
-        v_video.c
+        v_video.cpp
         v_video.h
-        w_wad.c
+        w_wad.cpp
         w_wad.h
-        wi_stuff.c
+        wi_stuff.cpp
         wi_stuff.h
-        z_zone.c
+        z_zone.cpp
         z_zone.h
 )
 
