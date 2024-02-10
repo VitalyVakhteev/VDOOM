@@ -4,7 +4,7 @@ project(VDOOM)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(VDOOM
-        am_map.c
+        am_map.cpp
         am_map.h
         d_englsh.h
         d_event.h
