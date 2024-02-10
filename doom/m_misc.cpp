@@ -37,28 +37,28 @@ rcsid[] = "$Id: m_misc.c,v 1.6 1997/02/03 22:45:10 b1 Exp $";
 #include <cstdint>
 
 
-#include "doomdef.h"
+#include "doomdef.hpp"
 
-#include "z_zone.h"
+#include "z_zone.hpp"
 
-#include "m_swap.h"
-#include "m_argv.h"
+#include "m_swap.hpp"
+#include "m_argv.hpp"
 
-#include "w_wad.h"
+#include "w_wad.hpp"
 
-#include "i_system.h"
-#include "i_video.h"
-#include "v_video.h"
+#include "i_system.hpp"
+#include "i_video.hpp"
+#include "v_video.hpp"
 
-#include "hu_stuff.h"
+#include "hu_stuff.hpp"
 
 // State.
-#include "doomstat.h"
+#include "doomstat.hpp"
 
 // Data.
-#include "dstrings.h"
+#include "dstrings.hpp"
 
-#include "m_misc.h"
+#include "m_misc.hpp"
 
 //
 // M_DrawText

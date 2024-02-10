@@ -90,9 +90,6 @@ $(O)/linux_xdoom:	$(OBJS) $(O)/i_main.o
 $(O)/%.o: %.cpp | object
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(O)/%.o: %.c | object
-	$(CC) $(CFLAGS) -c $< -o $@
-
 object:
 	mkdir -p $(O)
 

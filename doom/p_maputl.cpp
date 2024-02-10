@@ -31,14 +31,14 @@ rcsid[] = "$Id: p_maputl.c,v 1.5 1997/02/03 22:45:11 b1 Exp $";
 #include <stdlib.h>
 
 
-#include "m_bbox.h"
+#include "m_bbox.hpp"
 
-#include "doomdef.h"
-#include "p_local.h"
+#include "doomdef.hpp"
+#include "p_local.hpp"
 
 
 // State.
-#include "r_state.h"
+#include "r_state.hpp"
 
 //
 // P_AproxDistance

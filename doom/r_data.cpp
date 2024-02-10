@@ -29,26 +29,26 @@ rcsid[] = "$Id: r_data.c,v 1.4 1997/02/03 16:47:55 b1 Exp $";
 
 #include <stdint.h>
 #include <alloca.h>
-#include "i_system.h"
-#include "z_zone.h"
+#include "i_system.hpp"
+#include "z_zone.hpp"
 
-#include "m_swap.h"
+#include "m_swap.hpp"
 
-#include "w_wad.h"
+#include "w_wad.hpp"
 
-#include "doomdef.h"
-#include "r_local.h"
-#include "p_local.h"
+#include "doomdef.hpp"
+#include "r_local.hpp"
+#include "p_local.hpp"
 
-#include "doomstat.h"
-#include "r_sky.h"
+#include "doomstat.hpp"
+#include "r_sky.hpp"
 
 #ifdef LINUX
 #include  <alloca.h>
 #endif
 
 
-#include "r_data.h"
+#include "r_data.hpp"
 
 //
 // Graphics.
@@ -356,7 +356,7 @@ void R_GenerateLookup (int texnum)
 		    texture->name);
 	    return;
 	}
-	// I_Error ("R_GenerateLookup: column without a patch");
+	// I_Error ("R_GenerateLookup: column without a path");
 	
 	if (patchcount[x] > 1)
 	{

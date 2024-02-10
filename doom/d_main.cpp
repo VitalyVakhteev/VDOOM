@@ -42,41 +42,41 @@ static const char rcsid[] = "$Id: d_main.c,v 1.8 1997/02/03 22:45:09 b1 Exp $";
 
 
 #include <cstdlib>
-#include "doomdef.h"
-#include "doomstat.h"
+#include "doomdef.hpp"
+#include "doomstat.hpp"
 
-#include "dstrings.h"
-#include "sounds.h"
-
-
-#include "z_zone.h"
-#include "w_wad.h"
-#include "s_sound.h"
-#include "v_video.h"
-
-#include "f_finale.h"
-#include "f_wipe.h"
-
-#include "m_argv.h"
-#include "m_misc.h"
-#include "m_menu.h"
-
-#include "i_system.h"
-#include "i_sound.h"
-#include "i_video.h"
-
-#include "g_game.h"
-
-#include "hu_stuff.h"
-#include "wi_stuff.h"
-#include "st_stuff.h"
-#include "am_map.h"
-
-#include "p_setup.h"
-#include "r_local.h"
+#include "dstrings.hpp"
+#include "sounds.hpp"
 
 
-#include "d_main.h"
+#include "z_zone.hpp"
+#include "w_wad.hpp"
+#include "s_sound.hpp"
+#include "v_video.hpp"
+
+#include "f_finale.hpp"
+#include "f_wipe.hpp"
+
+#include "m_argv.hpp"
+#include "m_misc.hpp"
+#include "m_menu.hpp"
+
+#include "i_system.hpp"
+#include "i_sound.hpp"
+#include "i_video.hpp"
+
+#include "g_game.hpp"
+
+#include "hu_stuff.hpp"
+#include "wi_stuff.hpp"
+#include "st_stuff.hpp"
+#include "am_map.hpp"
+
+#include "p_setup.hpp"
+#include "r_local.hpp"
+
+
+#include "d_main.hpp"
 
 //
 // D-DoomLoop()
@@ -810,9 +810,9 @@ void D_DoomMain (void)
     respawnparm = M_CheckParm ("-respawn");
     fastparm = M_CheckParm ("-fast");
     devparm = M_CheckParm ("-devparm");
-    if (M_CheckParm ("-altdeath"))
+    if (M_CheckParm ("-altdea.hpp"))
 	deathmatch = 2;
-    else if (M_CheckParm ("-deathmatch"))
+    else if (M_CheckParm ("-deathmat.hpp"))
 	deathmatch = 1;
 
     switch ( gamemode )

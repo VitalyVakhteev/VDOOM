@@ -27,25 +27,25 @@ rcsid[] = "$Id: p_inter.c,v 1.4 1997/02/03 22:45:11 b1 Exp $";
 
 
 // Data.
-#include "doomdef.h"
-#include "dstrings.h"
-#include "sounds.h"
+#include "doomdef.hpp"
+#include "dstrings.hpp"
+#include "sounds.hpp"
 
-#include "doomstat.h"
+#include "doomstat.hpp"
 
-#include "m_random.h"
-#include "i_system.h"
+#include "m_random.hpp"
+#include "i_system.hpp"
 
-#include "am_map.h"
+#include "am_map.hpp"
 
-#include "p_local.h"
+#include "p_local.hpp"
 
-#include "s_sound.h"
+#include "s_sound.hpp"
 
 #ifdef __GNUG__
-#pragma implementation "p_inter.h"
+#pragma implementation "p_inter.hpp"
 #endif
-#include "p_inter.h"
+#include "p_inter.hpp"
 
 
 #define BONUSADD	6

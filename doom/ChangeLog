@@ -344,7 +344,7 @@ Fri Dec 19 10:02:48 1997    <bk@gamers.org>
 	  scaling of the menu (effective range 0-15),
 	  up to 0..120, by multiply with 8 scattered
  	  all over the place, that we got a
-	   v_video.c: I_Error ("Bad V_DrawPatch")
+	   v_video.c: I_Error ("Bad V_DrawPat.hpp")
 	  Now I am using the menu resolution
 	  everywhere, and scaling should only be done
 	  in the actual mixing/output.
@@ -457,8 +457,8 @@ Sat Aug 16 08:07:16 1997    <bk@hal.gamers.org>
  	  Moved anim_t etc., locally used only. There is
 	  another anim_t in wi_stuff.h/c, now local as well,
 	  so collisions on header inclusion should not occur.
-          #include "doomdef.h"
-          #include "doomstat.h"
+          #include "doomdef.hpp"
+          #include "doomstat.hpp"
 	  these should now be topmost includes.
 	
 	* doomstat.h, doomdef.h, wi_stuff.h, d_player.h:
@@ -623,7 +623,7 @@ Thu Jan 30 20:50:16 1997    <bk@gamers.org ()>
         * tables.c: 
           Added SlopeDiv from r_main.c, added all defines and typedefs
           related to basic trig table use here, removed it.
-          Currently "tables.h" is included in doomdef.h and
+          Currently "tables.hpp" is included in doomdef.h and
           r_local.h, too. This is not too cleanly separated, but
           we have to start somewhere, right?
 
@@ -647,7 +647,7 @@ Thu Jan 30 20:50:16 1997    <bk@gamers.org ()>
         * g_game.c: 
         * d_main.c: 
         * f_finale.c:
-          Added #include "z_zone.h". 
+          Added #include "z_zone.hpp".
 
         * z_zone.h: 
           Created, from stuff in doomdef.h
@@ -725,7 +725,7 @@ Wed Jan 22 12:15:00 1997    <bk@gamers.org ()>
         * CVS checkin of purification run. Sources now compile
           without any "-Wall" warnings.
 
-        * Note: with -file "tnt.wad", we get an "Error: Bad V_DrawPatch"
+        * Note: with -file "tnt.wad", we get an "Error: Bad V_DrawPat.hpp"
           abort each time we enter an exit. Invalid or missing
           intermission screen?
 

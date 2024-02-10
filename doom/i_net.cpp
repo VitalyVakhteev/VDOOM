@@ -35,17 +35,17 @@ rcsid[] = "$Id: m_bbox.c,v 1.1 1997/02/03 22:45:10 b1 Exp $";
 #include <netdb.h>
 #include <sys/ioctl.h>
 
-#include "i_system.h"
-#include "d_event.h"
-#include "d_net.h"
-#include "m_argv.h"
+#include "i_system.hpp"
+#include "d_event.hpp"
+#include "d_net.hpp"
+#include "m_argv.hpp"
 
-#include "doomstat.h"
+#include "doomstat.hpp"
 
 #ifdef __GNUG__
-#pragma implementation "i_net.h"
+#pragma implementation "i_net.hpp"
 #endif
-#include "i_net.h"
+#include "i_net.hpp"
 
 
 

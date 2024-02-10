@@ -29,19 +29,19 @@ rcsid[] = "$Id: s_sound.c,v 1.6 1997/02/03 22:45:12 b1 Exp $";
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "i_system.h"
-#include "i_sound.h"
-#include "sounds.h"
-#include "s_sound.h"
+#include "i_system.hpp"
+#include "i_sound.hpp"
+#include "sounds.hpp"
+#include "s_sound.hpp"
 
-#include "z_zone.h"
-#include "m_random.h"
-#include "w_wad.h"
+#include "z_zone.hpp"
+#include "m_random.hpp"
+#include "w_wad.hpp"
 
-#include "doomdef.h"
-#include "p_local.h"
+#include "doomdef.hpp"
+#include "p_local.hpp"
 
-#include "doomstat.h"
+#include "doomstat.hpp"
 
 
 // Purpose?

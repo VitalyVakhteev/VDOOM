@@ -133,7 +133,7 @@ namespace Doom {
     constexpr std::string_view HUSTR_E3M8 = "E3M8: Dis";
     constexpr std::string_view HUSTR_E3M9 = "E3M9: Warrens";
 
-    constexpr std::string_view HUSTR_E4M1 = "E4M1: Hell Beneath";
+    constexpr std::string_view HUSTR_E4M1 = "E4M1: Hell Benea.hpp";
     constexpr std::string_view HUSTR_E4M2 = "E4M2: Perfect Hatred";
     constexpr std::string_view HUSTR_E4M3 = "E4M3: Sever The Wicked";
     constexpr std::string_view HUSTR_E4M4 = "E4M4: Unruly Evil";
@@ -248,7 +248,7 @@ namespace Doom {
     constexpr std::string_view THUSTR_29 = "level 29: river styx";
     constexpr std::string_view THUSTR_30 = "level 30: last call";
 
-    constexpr std::string_view THUSTR_31 = "level 31: pharaoh";
+    constexpr std::string_view THUSTR_31 = "level 31: phara.hpp";
     constexpr std::string_view THUSTR_32 = "level 32: caribbean";
 
     constexpr std::string_view HUSTR_CHATMACRO1 = "I'm ready to kick butt!";

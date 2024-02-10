@@ -5,128 +5,130 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(VDOOM
         am_map.cpp
-        am_map.h
-        d_englsh.h
-        d_event.h
-        d_french.h
-        d_items.c
-        d_items.h
+        am_map.hpp
+        d_englsh.hpp
+        d_event.hpp
+        d_french.hpp
+        d_items.cpp
+        d_items.hpp
         d_main.cpp
-        d_main.h
+        d_main.hpp
         d_net.cpp
-        d_net.h
-        d_player.h
-        d_textur.h
-        d_think.h
-        d_ticcmd.h
-        doomdata.h
-        doomdef.c
-        doomdef.h
-        doomstat.c
-        doomstat.h
-        doomtype.h
-        dstrings.c
-        dstrings.h
+        d_net.hpp
+        d_player.hpp
+        d_textur.hpp
+        d_think.hpp
+        d_ticcmd.hpp
+        doomdata.hpp
+        doomdef.cpp
+        doomdef.hpp
+        doomstat.cpp
+        doomstat.hpp
+        doomtype.hpp
+        dstrings.cpp
+        dstrings.hpp
         f_finale.cpp
-        f_finale.h
-        f_wipe.c
-        f_wipe.h
+        f_finale.hpp
+        f_wipe.cpp
+        f_wipe.hpp
         g_game.cpp
-        g_game.h
-        hu_lib.c
-        hu_lib.h
+        g_game.hpp
+        hu_lib.cpp
+        hu_lib.hpp
         hu_stuff.cpp
-        hu_stuff.h
-        i_main.c
+        hu_stuff.hpp
+        i_main.cpp
         i_net.cpp
-        i_net.h
-        i_sound.c
-        i_sound.h
-        i_system.c
-        i_system.h
+        i_net.hpp
+        i_sound.cpp
+        i_sound.hpp
+        i_system.cpp
+        i_system.hpp
         i_video.cpp
-        i_video.h
+        i_video.hpp
         info.cpp
-        info.h
-        m_argv.c
-        m_argv.h
-        m_bbox.c
-        m_bbox.h
-        m_cheat.c
-        m_cheat.h
-        m_fixed.c
-        m_fixed.h
+        info.hpp
+        m_argv.cpp
+        m_argv.hpp
+        m_bbox.cpp
+        m_bbox.hpp
+        m_cheat.cpp
+        m_cheat.hpp
+        m_fixed.cpp
+        m_fixed.hpp
         m_menu.cpp
-        m_menu.h
+        m_menu.hpp
         m_misc.cpp
-        m_misc.h
-        m_random.c
-        m_random.h
-        m_swap.c
-        m_swap.h
+        m_misc.hpp
+        m_random.cpp
+        m_random.hpp
+        m_swap.cpp
+        m_swap.hpp
         p_ceilng.cpp
         p_doors.cpp
         p_enemy.cpp
         p_floor.cpp
         p_inter.cpp
-        p_inter.h
+        p_inter.hpp
         p_lights.cpp
-        p_local.h
+        p_local.hpp
         p_map.cpp
         p_maputl.cpp
         p_mobj.cpp
-        p_mobj.h
+        p_mobj.hpp
         p_plats.cpp
         p_pspr.cpp
-        p_pspr.h
+        p_pspr.hpp
         p_saveg.cpp
-        p_saveg.h
+        p_saveg.hpp
         p_setup.cpp
-        p_setup.h
+        p_setup.hpp
         p_sight.cpp
         p_spec.cpp
-        p_spec.h
+        p_spec.hpp
         p_switch.cpp
         p_telept.cpp
         p_tick.cpp
-        p_tick.h
+        p_tick.hpp
         p_user.cpp
         r_bsp.cpp
-        r_bsp.h
+        r_bsp.hpp
         r_data.cpp
-        r_data.h
-        r_defs.h
+        r_data.hpp
+        r_defs.hpp
         r_draw.cpp
-        r_draw.h
-        r_local.h
+        r_draw.hpp
+        r_local.hpp
         r_main.cpp
-        r_main.h
+        r_main.hpp
         r_plane.cpp
-        r_plane.h
+        r_plane.hpp
         r_segs.cpp
-        r_segs.h
+        r_segs.hpp
         r_sky.cpp
-        r_sky.h
-        r_state.h
+        r_sky.hpp
+        r_state.hpp
         r_things.cpp
-        r_things.h
+        r_things.hpp
         s_sound.cpp
-        s_sound.h
+        s_sound.hpp
         sounds.cpp
-        sounds.h
+        sounds.hpp
         st_lib.cpp
-        st_lib.h
+        st_lib.hpp
         st_stuff.cpp
-        st_stuff.h
+        st_stuff.hpp
         tables.cpp
-        tables.h
+        tables.hpp
         v_video.cpp
-        v_video.h
+        v_video.hpp
         w_wad.cpp
-        w_wad.h
+        w_wad.hpp
         wi_stuff.cpp
-        wi_stuff.h
+        wi_stuff.hpp
         z_zone.cpp
-        z_zone.h
+        z_zone.hpp
+        am_map.hpp
+        d_englsh.hpp
 )
 

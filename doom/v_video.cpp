@@ -28,16 +28,16 @@ static const char
 rcsid[] = "$Id: v_video.c,v 1.5 1997/02/03 22:45:13 b1 Exp $";
 
 
-#include "i_system.h"
-#include "r_local.h"
+#include "i_system.hpp"
+#include "r_local.hpp"
 
-#include "doomdef.h"
-#include "doomdata.h"
+#include "doomdef.hpp"
+#include "doomdata.hpp"
 
-#include "m_bbox.h"
-#include "m_swap.h"
+#include "m_bbox.hpp"
+#include "m_swap.hpp"
 
-#include "v_video.h"
+#include "v_video.hpp"
 
 
 // Each screen is [SCREENWIDTH*SCREENHEIGHT]; 
