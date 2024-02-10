@@ -1,39 +1,52 @@
-#pragma once
+// Emacs style mode select   -*- C++ -*- 
+//-----------------------------------------------------------------------------
+//
+// $Id:$
+//
+// Copyright (C) 1993-1996 by id Software, Inc.
+//
+// This source is available for distribution and/or modification
+// only under the terms of the DOOM Source Code License as
+// published by id Software. All rights reserved.
+//
+// The source is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// FITNESS FOR A PARTICULAR PURPOSE. See the DOOM Source Code License
+// for more details.
+//
+// DESCRIPTION:
+//	Items: key cards, artifacts, weapon, ammunition.
+//
+//-----------------------------------------------------------------------------
 
-#include <array>
+
+#ifndef __D_ITEMS__
+#define __D_ITEMS__
+
 #include "doomdef.h"
 
-namespace Doom {
+#ifdef __GNUG__
+#pragma interface
+#endif
 
-    enum class AmmoType {
-        NoAmmo,
-        Clip,
-        Shell,
-        Misl,
-        Cell
-    };
 
-    enum class WeaponState {
-        UpState,
-        DownState,
-        ReadyState,
-        AtkState,
-        FlashState
-    };
+// Weapon info: sprite frames, ammunition use.
+typedef struct
+{
+    ammotype_t	ammo;
+    int		upstate;
+    int		downstate;
+    int		readystate;
+    int		atkstate;
+    int		flashstate;
 
-    struct WeaponInfo {
-        AmmoType ammoType;
-        WeaponState upState;
-        WeaponState downState;
-        WeaponState readyState;
-        WeaponState atkState;
-        WeaponState flashState;
+} weaponinfo_t;
 
-        WeaponInfo(AmmoType ammo, WeaponState up, WeaponState down, WeaponState ready, WeaponState atk, WeaponState flash)
-                : ammoType(ammo), upState(up), downState(down), readyState(ready), atkState(atk), flashState(flash) {}
-    };
+extern  weaponinfo_t    weaponinfo[NUMWEAPONS];
 
-// Assuming definitions for weapon states are available elsewhere, for example in "DoomStates.h"
-    extern const std::array<WeaponInfo, static_cast<size_t>(WeaponType::NUMWEAPONS)> weaponInfo;
-
-}
+#endif
+//-----------------------------------------------------------------------------
+//
+// $Log:$
+//
+//-----------------------------------------------------------------------------

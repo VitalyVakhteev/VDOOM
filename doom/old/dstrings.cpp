@@ -1,7 +1,7 @@
 #include <array>
 #include <string>
 
-#include "dstrings.h"
+#include "dstrings.hpp"
 
 namespace Doom {
     const std::array<std::string, NUM_QUITMESSAGES> endmsg = {

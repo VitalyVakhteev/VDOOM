@@ -1,7 +1,7 @@
 #pragma once
 
 #include <array>
-#include "info.h"
+#include "info.hpp"
 
 namespace Doom {
 

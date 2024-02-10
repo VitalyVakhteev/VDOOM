@@ -1,43 +1,79 @@
-#pragma once
+// Emacs style mode select   -*- C++ -*- 
+//-----------------------------------------------------------------------------
+//
+// $Id:$
+//
+// Copyright (C) 1993-1996 by id Software, Inc.
+//
+// This source is available for distribution and/or modification
+// only under the terms of the DOOM Source Code License as
+// published by id Software. All rights reserved.
+//
+// The source is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// FITNESS FOR A PARTICULAR PURPOSE. See the DOOM Source Code License
+// for more details.
+//
+// DESCRIPTION:
+//  MapObj data. Map Objects or mobjs are actors, entities,
+//  thinker, take-your-pick... anything that moves, acts, or
+//  suffers state changes of more or less violent nature.
+//
+//-----------------------------------------------------------------------------
 
-#include <functional>
-#include <utility>
 
-namespace Doom {
-    // For C++, we can use the std::function to handle function pointers more cleanly.
-    using ActionFuncV = std::function<void()>;
-    using ActionFuncP1 = std::function<void(void*)>;
-    using ActionFuncP2 = std::function<void(void*, void*)>;
+#ifndef __D_THINK__
+#define __D_THINK__
 
-    // The actionf_t union in the original can be swapped with a std::variant in C++ to
-    // safely store one of several types. However, if the types are all
-    // std::function with different signatures, it might be simpler just to have
-    // separate members or use a more specific design depending on usage context.
-    // For simplicity, the structure is defined to hold any of the function types.
-    // Adjustments may be needed based on specific usage patterns in the game.
 
-    struct ActionFunc {
-        ActionFuncV acv;
-        ActionFuncP1 acp1;
-        ActionFuncP2 acp2;
+#ifdef __GNUG__
+#pragma interface
+#endif
 
-        explicit ActionFunc(ActionFuncV func) : acv(std::move(func)) {}
-        explicit ActionFunc(ActionFuncP1 func) : acp1(std::move(func)) {}
-        explicit ActionFunc(ActionFuncP2 func) : acp2(std::move(func)) {}
 
-        ActionFunc() = default;
-    };
 
-    // In C++, we can define the think_t type as an ActionFunc, which can represent any action function type.
-    using ThinkFunc = ActionFunc;
+//
+// Experimental stuff.
+// To compile this as "ANSI C with classes"
+//  we will need to handle the various
+//  action functions cleanly.
+//
+typedef  void (*actionf_v)();
+typedef  void (*actionf_p1)( void* );
+typedef  void (*actionf_p2)( void*, void* );
 
-    // The thinker_s struct will then become a class with public members for accessibility.
-    class Thinker {
-    public:
-        Thinker* prev;
-        Thinker* next;
-        ThinkFunc function;
+typedef union
+{
+  actionf_p1	acp1;
+  actionf_v	acv;
+  actionf_p2	acp2;
 
-        Thinker() : prev(nullptr), next(nullptr), function() {}
-    };
-}
+} actionf_t;
+
+
+
+
+
+// Historically, "think_t" is yet another
+//  function pointer to a routine to handle
+//  an actor.
+typedef actionf_t  think_t;
+
+
+// Doubly linked list of actors.
+typedef struct thinker_s
+{
+    struct thinker_s*	prev;
+    struct thinker_s*	next;
+    think_t		function;
+    
+} thinker_t;
+
+
+
+#endif
+//-----------------------------------------------------------------------------
+//
+// $Log:$
+//
+//-----------------------------------------------------------------------------

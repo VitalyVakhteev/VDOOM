@@ -1,55 +1,89 @@
-#pragma once
+// Emacs style mode select   -*- C++ -*- 
+//-----------------------------------------------------------------------------
+//
+// $Id:$
+//
+// Copyright (C) 1993-1996 by id Software, Inc.
+//
+// This source is available for distribution and/or modification
+// only under the terms of the DOOM Source Code License as
+// published by id Software. All rights reserved.
+//
+// The source is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// FITNESS FOR A PARTICULAR PURPOSE. See the DOOM Source Code License
+// for more details.
+//
+// DESCRIPTION:
+//	WAD I/O functions.
+//
+//-----------------------------------------------------------------------------
 
-#include <vector>
-#include <string>
-#include <fstream>
-#include <memory>
 
-namespace Doom {
-    class LumpCache;
+#ifndef __W_WAD__
+#define __W_WAD__
 
-    struct WadInfo {
-        std::string identification;
-        int numLumps;
-        int infoTableOffset;
-    };
 
-    struct FileLump {
-        int filePosition;
-        int size;
-        const char *name;
-    };
+#ifdef __GNUG__
+#pragma interface
+#endif
 
-    class LumpInfo {
-    public:
-        std::string name;
-        int handle;
-        int position;
-        int size;
 
-        LumpInfo(std::string name, int handle, int position, int size)
-                : name(std::move(name)), handle(handle), position(position), size(size) {}
-    };
+//
+// TYPES
+//
+typedef struct
+{
+    // Should be "IWAD" or "PWAD".
+    char		identification[4];		
+    int			numlumps;
+    int			infotableofs;
+    
+} wadinfo_t;
 
-    class WadFile {
-    private:
-        std::vector<LumpInfo> lumpInfos;
-        std::vector<std::unique_ptr<char[]>> lumpCache;
 
-    public:
-        WadFile() = default;
-        void initMultipleFiles(const std::vector<std::string>& filenames);
-        void reload();
+typedef struct
+{
+    int			filepos;
+    int			size;
+    char		name[8];
+    
+} filelump_t;
 
-        int checkNumForName(const std::string& name) const;
-        int getNumForName(const std::string& name) const;
+//
+// WADFILE I/O related stuff.
+//
+typedef struct
+{
+    char	name[8];
+    int		handle;
+    int		position;
+    int		size;
+} lumpinfo_t;
 
-        int lumpLength(int lump) const;
-        void readLump(int lump, void* dest);
 
-        void* cacheLumpNum(int lump, int tag);
-        void* cacheLumpName(const std::string& name, int tag);
+extern	void**		lumpcache;
+extern	lumpinfo_t*	lumpinfo;
+extern	int		numlumps;
 
-        int32_t swapInt32(int32_t val);
-    };
-}
+void    W_InitMultipleFiles (char** filenames);
+void    W_Reload (void);
+
+int	W_CheckNumForName (char* name);
+int	W_GetNumForName (char* name);
+
+int	W_LumpLength (int lump);
+void    W_ReadLump (int lump, void *dest);
+
+void*	W_CacheLumpNum (int lump, int tag);
+void*	W_CacheLumpName (char* name, int tag);
+
+
+
+
+#endif
+//-----------------------------------------------------------------------------
+//
+// $Log:$
+//
+//-----------------------------------------------------------------------------
